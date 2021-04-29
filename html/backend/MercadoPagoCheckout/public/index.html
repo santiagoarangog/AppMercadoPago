@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.min.css">
+    <title>Recargas &bull; SportSiete</title>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script type="text/javascript" src="javascripts/recarga.js" defer></script>
+</head>
+
+<body>
+    <main class="page-wrapper d-flex flex-column">
+        <!-- Page content-->
+        <!-- Background image-->
+        <div class="d-none d-md-block position-absolute w-50 h-100 bg-size-cover" style="top: 0; right: 0; background-image: url('https://images.unsplash.com/photo-1471295253337-3ceaaedca402?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1348&q=80');"></div>
+        <!-- Actual content-->
+        <section class="container d-flex align-items-center pt-7 pb-3 pb-md-4" style="flex: 1 0 auto;">
+            <div class="w-100 pt-3">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 offset-lg-1">
+                        <!-- Sign in view-->
+                        <div class="view show" id="signin-view">
+                            <div class="d-none d-md-block text-nowrap me-3">
+                                <a href="https://www.sportsiete.com/"><em class="ai-arrow-left"></em> Regresar al sitio principal</a>
+                            </div>
+                            <h1 class="h2">Recarga Sport Siete</h1>
+                            <p class="fs-ms text-muted mb-4">Recarga en nuestro sitio web el monto deseado</p>
+                            <form class="needs-validation" method="POST" id="formulario">
+                                <input type="hidden" name="unit" id="unit" value="1">
+                                <label class="font-weight-bold text-muted" for="monto">Producto:</label><br>
+                                <div class="input-group mb-3"><em class="ai-tag position-absolute top-50 start-0 translate-middle-y ms-3"></em>
+                                    <input class="form-control rounded" name="name" type="text" placeholder="Producto" id="name" value="Recarga SportSiete" readonly>
+                                </div>
+                                <label class="font-weight-bold text-muted" for="monto">Valor:</label><br>
+                                <div class="input-group mb-3"><em class="ai-dollar-sign position-absolute top-50 start-0 translate-middle-y ms-3"></em>
+                                    <input class="form-control rounded" name="price" type="number" maxlength="5" placeholder="Valor" id="price" required="">
+                                </div>
+                                <button class="btn btn-primary d-block w-100" type="submit" id="payment">Proceder pago</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+</body>
+
+</html>
